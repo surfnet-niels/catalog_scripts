@@ -1,0 +1,47 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo contents
+      uses: actions/checkout@v2
+      
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
+    - name: Execute py script
+      run: python extractDataFromMD.py
+    
+    - name: commit files
+      run: |
+        git config --local user.email "niels.vandijk@surfnet.nl"
+        git config --local user.name "Niels van Dijk"
+        git add -A
+        git commit -m "update data" -a
+          
+    - name: push changes
+      uses: catalog/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main  
+    
+    
