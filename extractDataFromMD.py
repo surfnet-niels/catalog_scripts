@@ -468,13 +468,13 @@ def parseSPs(ra_hash, inputfile, outputpath, namespaces):
           # Build Resource Info Pages
           info = "<ul>"
           for lng in infoDict:
-            info = info + "<li><a href='"+infoDict[lng]+ "' target='_blank'><img src='/images/"+lng+".png' alt='Info "+lng.upper()+"' height='18' width='18' /></a></li>"
+            info = info + "<li><a href='"+infoDict[lng]+ "' target='_blank'><img src='https://flagcdn.com/24x18/"+lng+".png' alt='Info "+lng.upper()+"' height='18' width='24' /></a></li>"
           info = info + "</ul>"
 
           # Build Resource Privacy Pages
           privacy = "<ul>"
           for lng in privacyDict:
-            privacy = privacy + "<li><a href='"+privacyDict[lng]+ "' target='_blank'><img src='/images/"+lng+".png' alt='Info "+lng.upper()+"' height='18' width='18' /></a></li>"
+            privacy = privacy + "<li><a href='"+privacyDict[lng]+ "' target='_blank'><img src='https://flagcdn.com/24x18/"+lng+".png' alt='Info "+lng.upper()+"' height='18' width='24' /></a></li>"
           privacy = privacy + "</ul>"
 
           # Get Requested Attributes
