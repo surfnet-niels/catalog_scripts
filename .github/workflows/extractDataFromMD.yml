@@ -7,6 +7,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+  - cron: "0 */1 * * *"    
 
 jobs:
   build:
@@ -35,7 +37,7 @@ jobs:
         git config --local user.email "niels.vandijk@surfnet.nl"
         git config --local user.name "Niels van Dijk"
         git add -A
-        git commit -m "update data" -a
+        git commit --allow-empty -m "update data" -a
           
     - name: push changes
       uses: ad-m/github-push-action@v0.6.0
