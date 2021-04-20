@@ -38,6 +38,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
-        repository: surfnet-niels/surfnet-niels.github.io
+        repository: git@github.com:surfnet-niels/surfnet-niels.github.io
     
     
