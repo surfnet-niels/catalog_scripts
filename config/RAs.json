@@ -2,7 +2,7 @@
 	"https://www.edugain.org": {
 		"name": "eduGAIN",
 		"country_code": "",
-		"md_url": ["http://mds.edugain.org"]
+		"md_url": ["https://mds.edugain.org/edugain-v2.xml"]
 	},
     "http://www.heanet.ie": {
 		"name": "Edugate",
@@ -83,11 +83,18 @@
 		"name": "LAIFE",
 		"country_code": "lv",
 		"md_url": ["https://laife.lanet.lv/metadata/laife-metadata.xml"]
+	}, 
+	"https://eduid.hu/en": {
+		"name": "eduID.hu",
+		"country_code": "hu",
+		"md_url": ["https://s3.eduid.hu/href-2020/href.xml"]
 	},      
     "http://www.surfconext.nl/": {
 		"name": "SURFconext",
 		"country_code": "nl",
 		"md_url": ["https://metadata.surfconext.nl/idps-metadata.xml"]
 	}
+
+	
 }
 
